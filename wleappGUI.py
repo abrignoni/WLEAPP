@@ -90,7 +90,7 @@ layout = [  [sg.Text('Windows Logs, Events, And Properties Parser', font=("Helve
                      sg.FolderBrowse(font=normal_font, button_text='Browse Folder', target=(sg.ThisRow, -2), key='INPUTFOLDERBROWSE')
                     ]
                 ],
-                title='Select a file (tar/zip/gz) or directory of the target service provider return for parsing:')],
+                title='Select a file (tar/zip/gz) or directory of the Windows file system for parsing:')],
             [sg.Frame(layout=[
                     [sg.Input(size=(112,1)), sg.FolderBrowse(font=normal_font, button_text='Browse Folder')]
                 ], 
