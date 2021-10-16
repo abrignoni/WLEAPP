@@ -5,8 +5,7 @@
 
 import traceback
 
-from scripts.artifacts.chromeExtensions import get_chromeExtensions
-from scripts.artifacts.googlePayTransactions import get_googlePayTransactions
+from scripts.artifacts.betterDiscord import get_betterDiscord
 
 
 from scripts.ilapfuncs import *
@@ -19,8 +18,7 @@ from scripts.ilapfuncs import *
 # Don't forget to import the module above!!!!
 
 tosearch = {
-    'chromeExtensions':('Test', ('*/Chrome/Extensions.json')),
-    'googlePayTransactions':('Test', ('*/Google Pay/Google transactions/transactions_*.csv')),
+    'betterDiscord':('Better Discord', ('*/AppData/Roaming/BetterDiscord/plugins/MessageLoggerV2Data.config.json')),
     
 }
 slash = '\\' if is_platform_windows() else '/'
