@@ -36,7 +36,7 @@ tosearch = {
     'dropbox':('Dropbox', ('*/AppData/Local/Packages/*.DROPBOX_*/LocalState/users/*/*.sqlite', '*/AppData/Local/Dropbox/instance1/sync_history.db')),
     'facebookMessenger':('Facebook Messenger', ('*/AppData/Local/Packages/FACEBOOK.*_*/LocalState/msys_*.db')),
     'googleDrive':('Google Drive', ('*/AppData/Local/Google/DriveFS/*/metadata_sqlite_db')),
-    'setupapiDev':('setupapi.dev.log', ("*/Windows/INF/setupapi.dev.log")),
+    'setupapiDev':('setupapi.dev.log', ('*/Windows/INF/setupapi.dev.log')),
     'windowsAlarms':('Windows Alarms', ('*/AppData/Local/Packages/Microsoft.WindowsAlarms_*/LocalState/Alarms/Alarms.json', '*/AppData/Local/Packages/Microsoft.WindowsAlarms_*/Settings/settings.dat')),
     'windowsCortana':('Windows Cortana', ('*/AppData/Local/Packages/Microsoft.Windows.Cortana_*/LocalState/DeviceSearchCache/AppCache*.txt')),
     'windowsEdge':('Windows Edge', ('*/AppData/Local/Microsoft/Windows/WebCache/WebCacheV01.dat')),
