@@ -5,8 +5,20 @@
 
 import traceback
 
+from scripts.artifacts.activitiesCache import get_activitiesCache
 from scripts.artifacts.betterDiscord import get_betterDiscord
-
+from scripts.artifacts.box import get_box
+from scripts.artifacts.dropbox import get_dropbox
+from scripts.artifacts.facebookMessenger import get_facebookMessenger
+from scripts.artifacts.googleDrive import get_googleDrive
+from scripts.artifacts.setupapiDev import get_setupapiDev
+from scripts.artifacts.windowsAlarms import get_windowsAlarms
+from scripts.artifacts.windowsCortana import get_windowsCortana
+from scripts.artifacts.windowsEdge import get_windowsEdge
+from scripts.artifacts.windowsNotification import get_windowsNotification
+from scripts.artifacts.windowsPhotos import get_windowsPhotos
+from scripts.artifacts.windowsStickyNotes import get_windowsStickyNotes
+from scripts.artifacts.windowsYourPhone import get_windowsYourPhone
 
 from scripts.ilapfuncs import *
 
@@ -18,8 +30,20 @@ from scripts.ilapfuncs import *
 # Don't forget to import the module above!!!!
 
 tosearch = {
+    'activitiesCache':('ActivitiesCache', ('*/AppData/Local/ConnectedDevicesPlatform/L.*/ActivitiesCache.db')),
     'betterDiscord':('Better Discord', ('*/AppData/Roaming/BetterDiscord/plugins/MessageLoggerV2Data.config.json')),
-    
+    'box':('Box', ('*/AppData/Local/Box/Box/Data/*.db')),
+    'dropbox':('Dropbox', ('*/AppData/Local/Packages/*.DROPBOX_*/LocalState/users/*/*.sqlite', '*/AppData/Local/Dropbox/instance1/sync_history.db')),
+    'facebookMessenger':('Facebook Messenger', ('*/AppData/Local/Packages/FACEBOOK.*_*/LocalState/msys_*.db')),
+    'googleDrive':('Google Drive', ('*/AppData/Local/Google/DriveFS/*/metadata_sqlite_db')),
+    'setupapiDev':('setupapi.dev.log', ('*/Windows/INF/setupapi.dev.log')),
+    'windowsAlarms':('Windows Alarms', ('*/AppData/Local/Packages/Microsoft.WindowsAlarms_*/LocalState/Alarms/Alarms.json', '*/AppData/Local/Packages/Microsoft.WindowsAlarms_*/Settings/settings.dat')),
+    'windowsCortana':('Windows Cortana', ('*/AppData/Local/Packages/Microsoft.Windows.Cortana_*/LocalState/DeviceSearchCache/AppCache*.txt')),
+    'windowsEdge':('Windows Edge', ('*/AppData/Local/Microsoft/Windows/WebCache/WebCacheV01.dat')),
+    'windowsNotification':('Windows Notification', ('*/Appdata/Local/Microsoft/Windows/Notifications/wpndatabase.db')),
+    'windowsPhotos':('Windows Photos', ('*/AppData/Local/Packages/Microsoft.Windows.Photos_*/LocalState/MediaDb.v1.sqlite')),
+    'windowsStickyNotes':('Windows StickyNotes', ('*/AppData/Local/Packages/Microsoft.MicrosoftStickyNotes_*/LocalState/plum.sqlite')),
+    'windowsYourPhone':('Windows YourPhone', ('*/AppData/Local/Packages/Microsoft.YourPhone_*/LocalCache/Indexed/*/System/Database/*'))
 }
 slash = '\\' if is_platform_windows() else '/'
 
