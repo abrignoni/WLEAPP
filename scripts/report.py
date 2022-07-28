@@ -59,6 +59,7 @@ def get_icon_name(category, artifact):
         elif artifact == 'NETFLIX - SEARCH HISTORY':   icon = 'search'
         else:                                          icon = 'tv'
     elif category == 'CONTACTS':            icon = 'user'
+    elif category == 'FIREWALL':            icon = 'filter'
     elif category == 'BETTER DISCORD':          icon = 'message-square'
     elif category == 'ACTIVITIESCACHE':         icon = 'activity'
     elif category == 'FACEBOOK MESSENGER':      icon = 'facebook'

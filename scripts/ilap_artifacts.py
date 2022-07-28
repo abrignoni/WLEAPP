@@ -11,6 +11,7 @@ from scripts.artifacts.box import get_box
 from scripts.artifacts.dropbox import get_dropbox
 from scripts.artifacts.facebookMessenger import get_facebookMessenger
 from scripts.artifacts.googleDrive import get_googleDrive
+from scripts.artifacts.pfirewall import get_pfirewall
 from scripts.artifacts.setupapiDev import get_setupapiDev
 from scripts.artifacts.windowsAlarms import get_windowsAlarms
 from scripts.artifacts.windowsCortana import get_windowsCortana
@@ -36,6 +37,7 @@ tosearch = {
     'dropbox':('Dropbox', ('*/AppData/Local/Packages/*.DROPBOX_*/LocalState/users/*/*.sqlite', '*/AppData/Local/Dropbox/instance1/sync_history.db')),
     'facebookMessenger':('Facebook Messenger', ('*/AppData/Local/Packages/FACEBOOK.*_*/LocalState/msys_*.db')),
     'googleDrive':('Google Drive', ('*/AppData/Local/Google/DriveFS/*/metadata_sqlite_db')),
+    'pfirewall':('Firewall', ('*/pfirewall.log')),
     'setupapiDev':('setupapi.dev.log', ('*/Windows/INF/setupapi.dev.log')),
     'windowsAlarms':('Windows Alarms', ('*/AppData/Local/Packages/Microsoft.WindowsAlarms_*/LocalState/Alarms/Alarms.json', '*/AppData/Local/Packages/Microsoft.WindowsAlarms_*/Settings/settings.dat')),
     'windowsCortana':('Windows Cortana', ('*/AppData/Local/Packages/Microsoft.Windows.Cortana_*/LocalState/DeviceSearchCache/AppCache*.txt')),
