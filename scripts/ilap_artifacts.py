@@ -35,7 +35,7 @@ tosearch = {
     'betterDiscord':('Better Discord', ('*/AppData/Roaming/BetterDiscord/plugins/MessageLoggerV2Data.config.json')),
     'box':('Box', ('*/AppData/Local/Box/Box/Data/*.db')),
     'dropbox':('Dropbox', ('*/AppData/Local/Packages/*.DROPBOX_*/LocalState/users/*/*.sqlite', '*/AppData/Local/Dropbox/instance1/sync_history.db')),
-    'facebookMessenger':('Facebook Messenger', ('*/AppData/Local/Packages/FACEBOOK.*_*/LocalState/msys_*.db')),
+    'facebookMessenger':('Facebook Messenger', ('*/AppData/Local/Packages/FACEBOOK.*_*/AC/Messenger/msys_*.db')),
     'googleDrive':('Google Drive', ('*/AppData/Local/Google/DriveFS/*/metadata_sqlite_db')),
     'pfirewall':('Firewall', ('*/pfirewall.log')),
     'setupapiDev':('setupapi.dev.log', ('*/Windows/INF/setupapi.dev.log')),
