@@ -31,7 +31,7 @@ def get_windowsPhotos(files_found, report_folder, seeker, wrap_text):
             LEFT JOIN ApplicationName ON item.Item_ApplicationNameId = ApplicationName.ApplicationName_Id
 			LEFT JOIN CameraManufacturer ON item.Item_CameraManufacturerId = CameraManufacturer.CameraManufacturer_Id
 			LEFT JOIN CameraModel ON item.Item_CameraModelId = CameraModel.CameraModel_Id
-            ORDER BY Item_DateCreated ASC''')
+            ORDER BY Item_DateCreated DESC''')
 
             all_rows = cursor.fetchall()
             usageentries = len(all_rows)
@@ -64,7 +64,7 @@ def get_windowsPhotos(files_found, report_folder, seeker, wrap_text):
             Folder.Folder_ItemCount AS Folder_ItemCount,
             datetime((Folder.Folder_DateCreated - 116444736000000000) / 10000000, 'unixepoch', 'localtime') AS Folder_DateCreated,
             datetime((Folder.Folder_DateModified - 116444736000000000) / 10000000, 'unixepoch', 'localtime') AS Folder_DateModified
-            FROM Folder ORDER BY Folder_DateCreated ASC''')
+            FROM Folder ORDER BY Folder_DateCreated DESC''')
             
             all_rows = cursor.fetchall()
             usageentries = len(all_rows)

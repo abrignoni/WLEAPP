@@ -29,7 +29,9 @@ def get_googleDrive(files_found, report_folder, seeker, wrap_text):
         datetime(ROUND("modified_date" / 1000), 'unixepoch', 'localtime') AS modified_date,
         datetime(ROUND("shared_with_me_date" / 1000), 'unixepoch', 'localtime') AS shared_with_me_date,
         datetime(ROUND("viewed_by_me_date" / 1000), 'unixepoch', 'localtime') AS viewed_by_me_date
-        FROM items''')
+        FROM items
+        ORDER BY modified_date DESC
+        ''')
 
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)

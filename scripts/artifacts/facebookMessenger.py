@@ -25,6 +25,7 @@ def get_facebookMessenger(files_found, report_folder, seeker, wrap_text):
             thread_messages.nullstate_description_text3 AS description3,
 			thread_messages.profile_picture_url AS profile_picture_url
             from thread_messages join contacts on contacts.id = thread_messages.sender_id
+            ORDER BY timestamp DESC
         ''')
 
         all_rows = cursor.fetchall()
@@ -58,7 +59,7 @@ def get_facebookMessenger(files_found, report_folder, seeker, wrap_text):
             bucket_stories.media_url AS media_url,
             bucket_stories.media_playable_url AS media_playable_url,
             bucket_stories.media_thumbnail_url AS media_thumbnail_url
-            from bucket_stories ORDER BY timestamp ASC
+            from bucket_stories ORDER BY timestamp DESC
         ''')
 
         all_rows = cursor.fetchall()
@@ -131,7 +132,7 @@ def get_facebookMessenger(files_found, report_folder, seeker, wrap_text):
             attachments.playable_url AS playable_url,
             attachments.playable_url_mime_type AS playable_url_mime_type,
             attachments.accessibility_summary_text AS summary_text
-            from attachments ORDER BY timestamp ASC
+            from attachments ORDER BY timestamp DESC
         ''')
 
         all_rows = cursor.fetchall()

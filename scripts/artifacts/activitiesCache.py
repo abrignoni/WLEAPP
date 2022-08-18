@@ -21,7 +21,7 @@ def get_activitiesCache(files_found, report_folder, seeker, wrap_text):
         datetime(Activity.ExpirationTime, 'unixepoch', 'localtime') AS ExpirationTime,
         datetime(Activity.StartTime, 'unixepoch', 'localtime') AS StartTime,
         datetime(Activity.EndTime, 'unixepoch', 'localtime') AS EndTime
-        FROM Activity ORDER BY Activity.StartTime ASC''')
+        FROM Activity ORDER BY Activity.StartTime DESC''')
 
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)

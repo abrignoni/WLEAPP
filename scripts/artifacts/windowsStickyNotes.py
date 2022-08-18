@@ -29,7 +29,7 @@ def get_windowsStickyNotes(files_found, report_folder, seeker, wrap_text):
         datetime(("CreatedAt" / 10000000) - 62135596800, 'unixepoch', 'localtime') AS CreatedAt,
         datetime(("UpdatedAt" / 10000000) - 62135596800, 'unixepoch', 'localtime') AS UpdatedAt,
         datetime(("DeletedAt" / 10000000) - 62135596800, 'unixepoch', 'localtime') AS DeletedAt
-        FROM Note ORDER BY Note.CreatedAt ASC''')
+        FROM Note ORDER BY Note.CreatedAt DESC''')
 
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)
