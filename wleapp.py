@@ -132,21 +132,24 @@ def crunch_artifacts(search_list, extracttype, input_path, out_params, ratio, wr
         else:
             search_regexes.append(val[1])
         files_found = []
+        log.write(f'<b>For {key} parser:</b>')
         for artifact_search_regex in search_regexes:
             found = seeker.search(artifact_search_regex)
             if not found:
                 logfunc()
-                logfunc(f'No files found for {key} -> {artifact_search_regex}')
-                log.write(f'No files found for {key} -> {artifact_search_regex}<br><br>')
+                logfunc(f'No file found for {key} -> {artifact_search_regex}')
+                log.write(f'<ul><li>No file found for regex <i>{artifact_search_regex}</i></li></ul>')
             else:
                 files_found.extend(found)
         if files_found:
+            log.write(f'<ul><li>{len(found)} {"files" if len(found) > 1 else "file"} for regex <i>{artifact_search_regex}</i> located at:')
             logfunc()
             process_artifact(files_found, key, artifact_pretty_name, seeker, out_params.report_folder_base, wrap_text)
             for pathh in files_found:
                 if pathh.startswith('\\\\?\\'):
                     pathh = pathh[4:]
-                log.write(f'Files for {artifact_search_regex} located at {pathh}<br><br>')
+                log.write(f'<ul><li>{pathh}</li></ul>')
+            log.write(f'</li></ul>')
         categories_searched += 1
         GuiWindow.SetProgressBar(categories_searched * ratio)
     log.close()
