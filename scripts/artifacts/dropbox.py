@@ -48,7 +48,7 @@ def get_dropbox(files_found, report_folder, seeker, wrap_text):
             CacheItem.Hash AS Hash,
             CacheItem.LastAccessDateTime AS LastAccessDateTime,
             CacheItem.LocalLastModifiedTime AS LocalLastModifiedTime
-            from CacheItem ORDER BY CacheItem.LastAccessDateTime desc
+            from CacheItem ORDER BY CacheItem.LastAccessDateTime DESC
         ''')
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)
@@ -120,7 +120,7 @@ def get_dropbox(files_found, report_folder, seeker, wrap_text):
             sync_history.local_path AS local_path,
             sync_history.other_user AS other_user,
             datetime(sync_history.timestamp, 'unixepoch', 'localtime') AS timestamp
-            from sync_history ORDER BY timestamp desc
+            from sync_history ORDER BY timestamp DESC
         ''')
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)

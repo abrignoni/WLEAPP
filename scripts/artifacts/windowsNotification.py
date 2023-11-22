@@ -19,7 +19,7 @@ def get_windowsNotification(files_found, report_folder, seeker, wrap_text):
         Notification.Type AS Type,
         datetime((Notification.ArrivalTime - 116444736000000000) / 10000000, 'unixepoch', 'localtime') AS ArrivalTime,
         datetime((Notification.ExpiryTime - 116444736000000000) / 10000000, 'unixepoch', 'localtime') AS ExpiryTime
-        FROM Notification ORDER BY Notification.ArrivalTime ASC''')
+        FROM Notification ORDER BY Notification.ArrivalTime DESC''')
 
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)

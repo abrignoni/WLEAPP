@@ -35,7 +35,7 @@ def get_box(files_found, report_folder, seeker, wrap_text):
             datetime(fsnodes.accessedAtTimestamp, 'unixepoch', 'localtime') AS accessedAtTimestamp,
             datetime(fsnodes.lastUsedTime, 'unixepoch', 'localtime') AS lastUsedTime,
             datetime(fsnodes.folderFetchTimestamp, 'unixepoch', 'localtime') AS folderFetchTimestamp
-            from fsnodes ORDER BY fsnodes.createdAtTimestamp desc
+            from fsnodes ORDER BY fsnodes.createdAtTimestamp DESC
         ''')
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)
@@ -71,7 +71,7 @@ def get_box(files_found, report_folder, seeker, wrap_text):
             box_item.size AS size,
             datetime(box_item.content_created_at, 'unixepoch', 'localtime') AS content_created_at,
             datetime(box_item.content_updated_at, 'unixepoch', 'localtime') AS content_updated_at
-            from box_item ORDER BY box_item.content_created_at desc
+            from box_item ORDER BY box_item.content_created_at DESC
         ''')
         all_rows = cursor.fetchall()
         usageentries = len(all_rows)
